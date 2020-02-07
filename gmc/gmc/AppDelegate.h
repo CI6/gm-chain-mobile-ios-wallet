@@ -10,6 +10,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (retain, nonatomic) UIWindow*     window;             //  应用普通窗口
 
 @end
 

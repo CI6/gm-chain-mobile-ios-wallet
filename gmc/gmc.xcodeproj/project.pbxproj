@@ -11,7 +11,9 @@
 		A29F82C823ED5D2F0041884B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29F82C723ED5D2F0041884B /* ViewController.m */; };
 		A29F82CD23ED5D320041884B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29F82CC23ED5D320041884B /* Assets.xcassets */; };
 		A29F82D323ED5D320041884B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A29F82D223ED5D320041884B /* main.m */; };
-		A29F82DA23ED66560041884B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29F82D923ED66560041884B /* Images.xcassets */; };
+		A29F82DE23EDA97D0041884B /* LaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29F82DD23EDA97D0041884B /* LaunchController.m */; };
+		A29F82E023EDBAD90041884B /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A29F82DF23EDBAD90041884B /* LauchScreen.storyboard */; };
+		A29F82E323EDC3C90041884B /* launchImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A29F82E223EDC3C90041884B /* launchImage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +25,10 @@
 		A29F82CC23ED5D320041884B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A29F82D123ED5D320041884B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A29F82D223ED5D320041884B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A29F82D923ED66560041884B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A29F82DC23EDA97D0041884B /* LaunchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchController.h; sourceTree = "<group>"; };
+		A29F82DD23EDA97D0041884B /* LaunchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchController.m; sourceTree = "<group>"; };
+		A29F82DF23EDBAD90041884B /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
+		A29F82E223EDC3C90041884B /* launchImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchImage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,8 @@
 		A29F82BF23ED5D2F0041884B /* gmc */ = {
 			isa = PBXGroup;
 			children = (
+				A29F82E123EDC3AD0041884B /* Images */,
+				A29F82DB23EDA8A40041884B /* controllers */,
 				A29F82C023ED5D2F0041884B /* AppDelegate.h */,
 				A29F82C123ED5D2F0041884B /* AppDelegate.m */,
 				A29F82C623ED5D2F0041884B /* ViewController.h */,
@@ -63,9 +70,26 @@
 				A29F82CC23ED5D320041884B /* Assets.xcassets */,
 				A29F82D123ED5D320041884B /* Info.plist */,
 				A29F82D223ED5D320041884B /* main.m */,
-				A29F82D923ED66560041884B /* Images.xcassets */,
+				A29F82DF23EDBAD90041884B /* LauchScreen.storyboard */,
 			);
 			path = gmc;
+			sourceTree = "<group>";
+		};
+		A29F82DB23EDA8A40041884B /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A29F82DC23EDA97D0041884B /* LaunchController.h */,
+				A29F82DD23EDA97D0041884B /* LaunchController.m */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		A29F82E123EDC3AD0041884B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A29F82E223EDC3C90041884B /* launchImage.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,8 +151,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29F82E323EDC3C90041884B /* launchImage.jpg in Resources */,
+				A29F82E023EDBAD90041884B /* LauchScreen.storyboard in Resources */,
 				A29F82CD23ED5D320041884B /* Assets.xcassets in Resources */,
-				A29F82DA23ED66560041884B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29F82DE23EDA97D0041884B /* LaunchController.m in Sources */,
 				A29F82C823ED5D2F0041884B /* ViewController.m in Sources */,
 				A29F82C223ED5D2F0041884B /* AppDelegate.m in Sources */,
 				A29F82D323ED5D320041884B /* main.m in Sources */,
@@ -152,6 +178,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
@@ -210,6 +238,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
@@ -262,6 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VU5P9AG67;
 				INFOPLIST_FILE = gmc/Info.plist;
@@ -277,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VU5P9AG67;
 				INFOPLIST_FILE = gmc/Info.plist;

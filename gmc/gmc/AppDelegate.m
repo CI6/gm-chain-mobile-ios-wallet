@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LaunchController.h"
 
 @interface AppDelegate ()
 
@@ -16,11 +17,32 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    NSLog(@"%@ starting ...",@"Hello GMC APP");
     
-    NSLog(@"%@ starting ...",@"GMC APP");
+    // Launch Controller
+    LaunchController* vc = [[LaunchController alloc] init];
+
+    // 创建 window
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self createMainWindow:YES];
+    [self.window setRootViewController:vc];
+    [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+-(UIWindow*)createMainWindow:(BOOL)force_reset
+{
+    if (self.window && !force_reset)
+        return self.window;
+    
+    ///<    初始化窗口
+    if (!self.window){
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    }
+    
+    return self.window;
 }
 
 //
