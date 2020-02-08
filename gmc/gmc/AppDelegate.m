@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LaunchController.h"
+#include "libs/secp256k1/secp256k1.h"
+
 
 @interface AppDelegate ()
 
@@ -15,10 +17,27 @@
 
 @implementation AppDelegate
 
+/**
+ *  获取上下文
+ */
+static secp256k1_context* get_static_context()
+{
+    static secp256k1_context* ctx_both = 0;
+    if (!ctx_both){
+        ctx_both  = secp256k1_context_create(SECP256K1_CONTEXT_VERIFY | SECP256K1_CONTEXT_SIGN);
+    }
+    return ctx_both;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     NSLog(@"%@ starting ...",@"Hello GMC APP");
+    
+    // test secp256k1 call
+    secp256k1_context* ctx_both = get_static_context();
+    
+    printf("secp256k1_context address -> %p\n",ctx_both);
     
     // Launch Controller
     LaunchController* vc = [[LaunchController alloc] init];
