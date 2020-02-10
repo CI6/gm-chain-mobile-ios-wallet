@@ -2,7 +2,7 @@
 //  LaunchController.m
 //  gmc
 //
-//  Created by kek on 2020/2/7.
+//  Created by AnonymityMaster on 2020/2/7.
 //  Copyright © 2020 ci6. All rights reserved.
 //
 

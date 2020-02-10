@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  gmc
 //
-//  Created by kek on 2020/2/7.
+//  Created by AnonymityMaster on 2020/2/7.
 //  Copyright © 2020 ci6. All rights reserved.
 //
 
@@ -31,6 +31,10 @@ static secp256k1_context* get_static_context()
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    unsigned char a = 200;
+    NSLog(@"test char -> %@", [NSString stringWithUTF8String:&a]);
+    
 
     NSLog(@"%@ starting ...",@"Hello GMC APP");
     
