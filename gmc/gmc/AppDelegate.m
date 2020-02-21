@@ -10,6 +10,8 @@
 #import "LaunchController.h"
 #include "libs/secp256k1/secp256k1.h"
 
+#include "test/TestGmcWallet.h"
+
 
 @interface AppDelegate ()
 
@@ -32,9 +34,6 @@ static secp256k1_context* get_static_context()
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    unsigned char a = 200;
-    NSLog(@"test char -> %@", [NSString stringWithUTF8String:&a]);
-    
 
     NSLog(@"%@ starting ...",@"Hello GMC APP");
     
@@ -42,6 +41,16 @@ static secp256k1_context* get_static_context()
     secp256k1_context* ctx_both = get_static_context();
     
     printf("secp256k1_context address -> %p\n",ctx_both);
+    
+    // test json serialize
+    NSDictionary* dict = @{ @"a": @"123", @"b": @"你好xxxxx" };
+    NSError* err = nil;
+    NSData* data_dict = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONReadingAllowFragments error:&err];
+    const unsigned char* data_bytes = (const unsigned char*)[data_dict bytes];
+    const unsigned char* data_bytes2 = "{\"a\":\"123\",\"b\":456,\"c\":\"你好!\"}";
+    
+    // test
+    testMain();
     
     // Launch Controller
     LaunchController* vc = [[LaunchController alloc] init];

@@ -65,6 +65,7 @@
 		A2EDA72823EFDBC400F29047 /* base58.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EDA6F523EFDBC400F29047 /* base58.c */; };
 		A2EDA72923EFDBC400F29047 /* rmd160.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EDA6F823EFDBC400F29047 /* rmd160.c */; };
 		A2EDA72F23EFE36100F29047 /* GmcWallet.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EDA72E23EFE36100F29047 /* GmcWallet.c */; };
+		A2EDA73223F11C2E00F29047 /* TestGmcWallet.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EDA73123F11C2E00F29047 /* TestGmcWallet.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +179,8 @@
 		A2EDA6F823EFDBC400F29047 /* rmd160.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rmd160.c; sourceTree = "<group>"; };
 		A2EDA72D23EFE36100F29047 /* GmcWallet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GmcWallet.h; sourceTree = "<group>"; };
 		A2EDA72E23EFE36100F29047 /* GmcWallet.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GmcWallet.c; sourceTree = "<group>"; };
+		A2EDA73023F11C2E00F29047 /* TestGmcWallet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestGmcWallet.h; sourceTree = "<group>"; };
+		A2EDA73123F11C2E00F29047 /* TestGmcWallet.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = TestGmcWallet.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -399,6 +402,8 @@
 		A2EDA72B23EFE2C800F29047 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				A2EDA73023F11C2E00F29047 /* TestGmcWallet.h */,
+				A2EDA73123F11C2E00F29047 /* TestGmcWallet.c */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				A2EDA71723EFDBC400F29047 /* BraIA64.c in Sources */,
 				A2EDA6FD23EFDBC400F29047 /* aes-cbc.c in Sources */,
 				A29F82C823ED5D2F0041884B /* ViewController.m in Sources */,
+				A2EDA73223F11C2E00F29047 /* TestGmcWallet.c in Sources */,
 				A2EDA71923EFDBC400F29047 /* 7zStream.c in Sources */,
 				A2EDA70A23EFDBC400F29047 /* Bra86.c in Sources */,
 				A2EDA70E23EFDBC400F29047 /* XzEnc.c in Sources */,
